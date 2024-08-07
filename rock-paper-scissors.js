@@ -88,10 +88,10 @@ function playGame(playerMove) {
 
   document.querySelector(
     ".js-player-move"
-  ).innerHTML = `<img src="images/${playerMove}-left.png" />`;
+  ).innerHTML = `<img src="./images/${playerMove}-left.png" />`;
   document.querySelector(
     ".js-computer-move"
-  ).innerHTML = `<img src="images/${computerMove}-right.png" />`;
+  ).innerHTML = `<img src="./images/${computerMove}-right.png" />`;
   document.querySelector(
     ".js-display-result"
   ).innerHTML = `${result}`;
