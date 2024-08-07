@@ -7,13 +7,13 @@ let score = JSON.parse(localStorage.getItem("score")) || {
 updateScore();
 
 document.querySelector(".js-rock-button").addEventListener("click", () => {
-  playGame("Rock");
+  playGame("rock");
 });
 document.querySelector(".js-paper-button").addEventListener("click", () => {
-  playGame("Paper");
+  playGame("paper");
 });
 document.querySelector(".js-scissors-button").addEventListener("click", () => {
-  playGame("Scissors");
+  playGame("scissors");
 });
 document.querySelector(".js-auto-play-button").addEventListener("click", () => {
   autoPlay();
@@ -34,11 +34,11 @@ function pickComputerMove() {
   let computerMove = '';
 
   if (randomNumber >= 0 && randomNumber < 1 / 3) {
-    computerMove = "Rock";
+    computerMove = "rock";
   } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-    computerMove = "Paper";
+    computerMove = "paper";
   } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-    computerMove = "Scissors";
+    computerMove = "scissors";
   }
   return computerMove;
 }
@@ -48,32 +48,32 @@ function playGame(playerMove) {
 
   let result;
 
-  if (playerMove === "Rock") {
-    if (computerMove === "Rock") {
+  if (playerMove === "rock") {
+    if (computerMove === "rock") {
       result = "Tie";
-    } else if (computerMove === "Paper") {
+    } else if (computerMove === "paper") {
       result = "You loose";
-    } else if (computerMove === "Scissors") {
+    } else if (computerMove === "scissors") {
       result = "You win";
     }
   }
 
-  if (playerMove === "Paper") {
-    if (computerMove === "Rock") {
+  if (playerMove === "paper") {
+    if (computerMove === "rock") {
       result = "You win";
-    } else if (computerMove === "Paper") {
+    } else if (computerMove === "paper") {
       result = "Tie";
-    } else if (computerMove === "Scissors") {
+    } else if (computerMove === "scissors") {
       result = "You loose";
     }
   }
 
   if (playerMove === "Scissors") {
-    if (computerMove === "Rock") {
+    if (computerMove === "rock") {
       result = "You loose";
-    } else if (computerMove === "Paper") {
+    } else if (computerMove === "paper") {
       result = "You win";
-    } else if (computerMove === "Scissors") {
+    } else if (computerMove === "scissors") {
       result = "Tie";
     }
   }
