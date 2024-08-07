@@ -68,7 +68,7 @@ function playGame(playerMove) {
     }
   }
 
-  if (playerMove === "Scissors") {
+  if (playerMove === "scissors") {
     if (computerMove === "rock") {
       result = "You loose";
     } else if (computerMove === "paper") {
